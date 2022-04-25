@@ -36,5 +36,5 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 The following gif shows the web application's appearance and functionality: 
 
-![Demonstration of the app's functionality](./Assets/demo)
+![Demonstration of the app's functionality](./Assets/demo.gif)
 
