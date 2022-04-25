@@ -8,21 +8,16 @@ router.get('/notes', (req, res) => {
     res.json(notes);
 });
 
-router.post( (req, res) => {
-  let dbPath = path.join(__dirname, "../../db/db.json");
-  let newNote = req.body;
+router.post("/api/notes", (req, res) => {
 
+  const newNote = req.body;
   newNote.id = uuidv4();
 
-  notes.push(newNote)
+  notes.push(newNote);
 
-  fs.writeFile(dbPath, JSON.stringify(notes), (err) => {
-      if (err) {
-        return console.log(err);
-      }
-      console.log("Note Saved");
-  }); 
-  res.json(newNote);
+  fs.writeFileSync('../../db/db.json', JSON.stringify(notes));
+
+  res.json(notes);
 });
 
 module.exports = router
