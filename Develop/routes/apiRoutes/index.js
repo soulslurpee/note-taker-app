@@ -24,3 +24,5 @@ router.post(function (req, res) {
   }); 
   res.json(newNote);
 });
+
+module.exports = router
