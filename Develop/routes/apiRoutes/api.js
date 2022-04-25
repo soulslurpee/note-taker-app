@@ -8,7 +8,7 @@ router.get('/notes', (req, res) => {
     res.json(notes);
 });
 
-router.post("/api/notes", (req, res) => {
+router.post('/notes', (req, res) => {
 
   const newNote = req.body;
   newNote.id = uuidv4();
